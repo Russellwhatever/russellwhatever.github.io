@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Russell's Blog</title>
+    <title>Russell's Minimalist Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
+
+<header>
+    <nav class="main-nav">
+        <a href="/">home</a>
+        <a href="/about.html">about</a>
+        <div class="logo">
+            <img src="logo.png" alt="Logo"> </div>
+        <a href="/blog.html">blog</a>
+        <a href="/contact.html">contact</a>
     </nav>
 
-    <h1>Articles</h1>
-    <ul>
-        <li>
-            <span>2026-01-11</span>
-            <a href="posts/hello-world.html">从零开始的极简博客：为什么我放弃了模板</a>
-        </li>
-    </ul>
+    <nav class="sub-nav">
+        <a href="/portfolio">{} portfolio</a>
+        <a href="/music">♪ music</a>
+        <a href="/conlangs">☼ conlangs</a>
+        <a href="/games" class="active">🍕 video games</a>
+        <a href="/boardgames">♞ board games</a>
+        <a href="/puzzles">🧩 puzzles</a>
+        <a href="/food">🥣 food</a>
+    </nav>
+</header>
+
+<main>
+    <h1>Video Games</h1>
+    <p>这里可以放置该分类下的项目介绍或文章列表...</p>
+</main>
+
 </body>
 </html>
