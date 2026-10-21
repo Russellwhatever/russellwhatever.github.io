@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Russell&#39;s Digital Garden - pkm</title>
+    <link rel="self" type="application/atom+xml" href="https://ruswhy.top/tags/pkm/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ruswhy.top/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-10-26T00:00:00+00:00</updated>
+    <id>https://ruswhy.top/tags/pkm/atom.xml</id>
+    <entry xml:lang="en">
+        <title>obsidian-flat-note</title>
+        <published>2025-10-26T00:00:00+00:00</published>
+        <updated>2025-10-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ruswhy.top/blog/obsidian-flat-note/"/>
+        <id>https://ruswhy.top/blog/obsidian-flat-note/</id>
+        
+        <content type="html" xml:base="https://ruswhy.top/blog/obsidian-flat-note/">&lt;p&gt;Available &lt;a rel=&quot;external&quot; href=&quot;https://github.com/Russellwhatever/obsidian-flat-notes&quot;&gt;Here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/Russellwhatever/obsidian-flat-notes/blob/master/README.md&quot;&gt;English&lt;/a&gt; | &lt;a rel=&quot;external&quot; href=&quot;https://github.com/Russellwhatever/obsidian-flat-notes/blob/master/%E7%A4%BA%E4%BE%8B%E5%BA%93/Archive/%E7%A4%BA%E4%BE%8B%E5%BA%93%E8%AF%B4%E6%98%8E.md&quot;&gt;中文&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;obsidian-flat-notes&quot;&gt;Obsidian Flat Notes&lt;/h1&gt;
+&lt;p&gt;An example Obsidian vault demonstrating how to manage notes without folders,
+using links, tags, and index notes instead of hierarchical structures.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Although Obsidian has grown into one of the most powerful bidirectional note-taking tools,&lt;br /&gt;
+with countless plugins and configuration options, its co-founder &lt;strong&gt;Steph Ango (kepano)&lt;/strong&gt; follows a few minimalist principles when managing his own vault&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;One of them is simple but radical:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do not build complex folder hierarchies.&lt;br /&gt;
+Organize notes with links and tags instead.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This repository provides a &lt;strong&gt;practical, working example&lt;/strong&gt; of such a system.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;what-this-vault-demonstrates&quot;&gt;What This Vault Demonstrates&lt;/h2&gt;
+&lt;p&gt;This example vault shows how to manage notes in a &lt;strong&gt;non-hierarchical (flat) structure&lt;/strong&gt;, mainly based on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Index Notes&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tags (with hierarchy)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bidirectional links&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Core plugins used:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Index Notes&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Templater&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;QuickAdd&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Folders exist only for technical or archival purposes, not as the primary organizational method.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;entry-point&quot;&gt;Entry Point&lt;/h2&gt;
+&lt;p&gt;This vault has &lt;strong&gt;a single main entry point&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[[Dashboard]]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Dashboard is divided into two parts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pinned notes&lt;/strong&gt; (top)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project-based or thematic index notes&lt;/strong&gt; (bottom), such as:
+&lt;ul&gt;
+&lt;li&gt;Projects&lt;/li&gt;
+&lt;li&gt;Literature&lt;/li&gt;
+&lt;li&gt;Work logs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you use daily notes, your workflow can also start from the daily note and link back into the system.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;creating-notes-folderless-workflow&quot;&gt;Creating Notes (Folderless Workflow)&lt;/h2&gt;
+&lt;p&gt;Without relying on folders, you no longer need to decide &lt;em&gt;where&lt;/em&gt; a note belongs.&lt;/p&gt;
+&lt;p&gt;Recommended ways to create notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + O&lt;/code&gt; → type a new note name&lt;/li&gt;
+&lt;li&gt;Create a new note directly using &lt;code&gt;[[New Note]]&lt;/code&gt; from an existing note&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After creating a note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add &lt;strong&gt;tags&lt;/strong&gt; to describe its meaning and context&lt;/li&gt;
+&lt;li&gt;Optionally set a &lt;code&gt;title&lt;/code&gt; field in frontmatter for better previews&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;index-notes-tag-hierarchy&quot;&gt;Index Notes &amp;amp; Tag Hierarchy&lt;/h2&gt;
+&lt;p&gt;Index notes (e.g. &lt;code&gt;[[Archive/Project A|Project A]]&lt;/code&gt;) automatically collect notes using tags.&lt;/p&gt;
+&lt;p&gt;How it works:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add a tag like &lt;code&gt;#projects/project-a&lt;/code&gt; to your notes&lt;/li&gt;
+&lt;li&gt;In the corresponding index note, add a tag:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#projects/project-a/idx&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This index note will then aggregate all related notes.&lt;/p&gt;
+&lt;p&gt;To create a &lt;strong&gt;meta-index&lt;/strong&gt; (like the Dashboard):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add an additional tag:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#projects/meta_idx&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This allows index notes themselves to be collected and displayed.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;work-logs&quot;&gt;Work Logs&lt;/h2&gt;
+&lt;p&gt;Work logs are created via a &lt;strong&gt;QuickAdd template&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Usage:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Press &lt;code&gt;Alt + Q&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Press Enter&lt;/li&gt;
+&lt;li&gt;A timestamp-based work log note is created automatically&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tags link logs to projects&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt; metadata enables preview in index notes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;daily-notes-template&quot;&gt;Daily Notes Template&lt;/h2&gt;
+&lt;p&gt;The daily note template is located at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[[Archive/Templates/日记模板|Daily Note Template]]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Daily note is created automatically when clicking a date in the calendar.&lt;/p&gt;
+&lt;p&gt;Each daily note provides:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Notes of the Day&lt;/strong&gt; – newly created or modified notes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Literature of the Day&lt;/strong&gt; – newly added references&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tasks Completed Today&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Implementation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Notes &amp;amp; literature: Obsidian &lt;strong&gt;Base&lt;/strong&gt; (official plugin)&lt;/li&gt;
+&lt;li&gt;Tasks: &lt;strong&gt;Dataview&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All entries are clickable and link back to their original notes.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;literature-task-management&quot;&gt;Literature &amp;amp; Task Management&lt;/h2&gt;
+&lt;p&gt;From the pinned notes on the Dashboard, you can access:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[[Archive/任务汇总|Task Overview]]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This page shows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unread literature (via Base queries)&lt;/li&gt;
+&lt;li&gt;Pending tasks (via Dataview)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All items link back to their source notes for quick context switching.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;optional-but-recommended&quot;&gt;Optional but Recommended&lt;/h2&gt;
+&lt;p&gt;The following components are &lt;strong&gt;not strictly required&lt;/strong&gt;, but highly recommended:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Daily notes for temporal context&lt;/li&gt;
+&lt;li&gt;Literature management via &lt;strong&gt;Citations&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Alt + E&lt;/code&gt; to insert a reference&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Shift + O&lt;/code&gt; to open literature notes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When used together, they significantly improve discoverability and reduce cognitive load.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;philosophy&quot;&gt;Philosophy&lt;/h2&gt;
+&lt;p&gt;This vault is designed to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduce over-classification&lt;/li&gt;
+&lt;li&gt;Avoid premature structure&lt;/li&gt;
+&lt;li&gt;Let structure &lt;strong&gt;emerge from usage&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Support notes belonging to multiple contexts naturally&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It reflects a workflow refined through continuous personal use and iteration.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;who-this-is-for&quot;&gt;Who This Is For&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Obsidian users curious about &lt;strong&gt;folderless workflows&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;PKM / Zettelkasten practitioners&lt;/li&gt;
+&lt;li&gt;Users overwhelmed by complex folder trees&lt;/li&gt;
+&lt;li&gt;Anyone who wants a &lt;strong&gt;scalable, link-first note system&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;/sup&gt;
+&lt;p&gt;https://stephango.com/vault&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;/sup&gt;
+&lt;p&gt;This vault: https://github.com/Russellwhatever/obsidian-flat-notes&lt;/p&gt;
+&lt;/div&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>obsidian-new-knowledge</title>
+        <published>2025-10-26T00:00:00+00:00</published>
+        <updated>2025-10-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ruswhy.top/blog/obsidian-new-knowledge/"/>
+        <id>https://ruswhy.top/blog/obsidian-new-knowledge/</id>
+        
+        <content type="html" xml:base="https://ruswhy.top/blog/obsidian-new-knowledge/">&lt;p&gt;Available &lt;a rel=&quot;external&quot; href=&quot;https://github.com/Russellwhatever/obsidian-newledge&quot;&gt;Here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A plugin forked from &lt;a rel=&quot;external&quot; href=&quot;https://www.xinzhi.zone&quot;&gt;new knowledge&lt;/a&gt;&#39;s official plugin, with more customizable settings, such as root dir, auto-tag-filter.&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

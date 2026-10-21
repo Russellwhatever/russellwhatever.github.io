@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Russell&#39;s Digital Garden - blog</title>
+    <link rel="self" type="application/atom+xml" href="https://ruswhy.top/tags/blog/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ruswhy.top/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-05-01T00:00:00+00:00</updated>
+    <id>https://ruswhy.top/tags/blog/atom.xml</id>
+    <entry xml:lang="en">
+        <title>26-04: 博客RSS与网页更新</title>
+        <published>2026-05-01T00:00:00+00:00</published>
+        <updated>2026-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ruswhy.top/blog/2026-04-yue-bao/"/>
+        <id>https://ruswhy.top/blog/2026-04-yue-bao/</id>
+        
+        <content type="html" xml:base="https://ruswhy.top/blog/2026-04-yue-bao/">&lt;h1 id=&quot;bo-ke-geng-xin&quot;&gt;博客更新&lt;/h1&gt;
+&lt;p&gt;本月博客迁移到了&lt;a href=&quot;https://ruswhy.top/blog/2026-04-yue-bao/ruswhy.top&quot;&gt;新域名&lt;/a&gt;。不过仍然有一些问题没能解决：测试发现，网页加载慢于之前托管在github.io的网页，且容易出现格式排版丢失；rss订阅链接在多平台多软件上测试，都无法应用。这部分应该来自于阿里云与github网页传输的问题，还需要我有时间后进行学习和微调。&lt;/p&gt;
+&lt;p&gt;值得庆祝的是，本月上线了一个可以自动总结所有当日rss文章的日报仓库，并已经&lt;a rel=&quot;external&quot; href=&quot;https://github.com/Russellwhatever/RSSAbout&quot;&gt;开源上线github&lt;/a&gt;。通过fork和配置私密环境变量LLM_API_KEY，读者也可以本地运行，或托管在github平台定时自动运行。欢迎访问和star！&lt;/p&gt;
+&lt;p&gt;本人目前维护一个超过120条rss来源的opml文件，并将在未来加入自动探索推荐机制。&lt;/p&gt;
+&lt;p&gt;每日日报会在不久后上线本博客。&lt;/p&gt;
+&lt;h1 id=&quot;ji-lu&quot;&gt;记录&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;电视台风云（Network）。电影。在宣传和娱乐主义的狂欢中，“新时代”长在电视机前的人类失去了对真实生活能力与爱的能力的感知，于是他们失去了许多，走向虚无。我能深刻地感受到电影所希望表达的历久弥新的主旨，对人的本性的表现，但受限于时代，电视机已经是当时人们最为恐怖的想象，我却生活在短视频和互联网的时代中，对其情绪可以共感，却很难感到恐惧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;色戒。电影。没有感觉到所传说的深刻或艺术，节奏有点轻快，有点荒谬，让人觉得牺牲毫无意义（当然我知道这本是主旨之一），爱也毫无意义，人生只是仓促和后悔。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;遗爱寺。话剧。非常喜欢的作家双雪涛首次尝试自编自导的话剧，但我的评价非常低。我看过好的话剧，它们和《遗爱寺》在气质上有鲜明的不同。双雪涛把话剧直截了当、抑扬顿挫的台词取消，把句子变得冗长、重复、故弄玄虚，观点变得迟疑、退缩、含糊不清。章宇则把严肃的句子说的轻佻。但是话剧的舞台设计、灯光倒有不少惊喜。我觉得这可以联系他的作家身份进行解释：他对小说的句子把握娴熟，但对手术刀般的台词则缺乏了解；舞台设计优美，是因为他拥有珍贵的艺术想象，但是却没能掌握使读者共同想象的方法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;罗马假日。奥黛丽·赫本的爱情电影。很美。故事的跌宕起伏则欠缺。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;百年孤独。我暑假上的书一直不少，但是并不总在看，最近也像夜跑一样，希望做一点日常的健康事情，就重新开始看了。目前还没有看完，纸质书看看，电子书看看。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+</feed>

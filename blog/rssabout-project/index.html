@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://ruswhy.top/logo.png">
+    <link rel="stylesheet" href="https://ruswhy.top/style.css">
+    <title>RSSAbout - Russell&#39;s Digital Garden</title>
+</head>
+<body>
+<header>
+<nav class="main-nav">
+<a href="/">home</a><a href="/about">about</a><a href="/" class="logo"><img src="/logo.png" alt="logo"></a><a href="/blog">blog</a><a href="/contact">contact</a>
+<a href="https://ruswhy.top/atom.xml" class="rss-link" title="RSS Feed">RSS</a>
+</nav>
+<nav class="sub-nav">
+<a href="/tags/puzzles/"># puzzles</a><a href="/tags/games/"># games</a><a href="/tags/reading/"># reading</a><a href="/tags/blog/"># blog</a>
+<span class="sep">|</span><a href="https://ruswhy.top/tags"># tags</a>
+</nav>
+</header>
+<main>
+<article><header><h1>RSSAbout</h1><div class="post-meta"><span class="cdm-item">2026-04-01</span><a class="cdm-item cdm-link-item" href="https://ruswhy.top/tags/projects/">#projects</a><a class="cdm-item cdm-link-item" href="https://ruswhy.top/tags/rss/">#rss</a></div></header>
+
+<section class="post-content"><p>一个将 RSS 订阅自动整理为每日新闻简报的工具。读取 OPML 订阅文件，抓取当日文章，通过 LLM 提取事件、去重归类，最终输出 Markdown 日报，可选转换为 HTML 或 PDF。</p>
+<p>支持两阶段 LLM 流水线（先逐篇提取事件，再跨来源去重合并），也提供关键词分类作为无 LLM 时的备选方案。兼容 OpenAI 系 API 和 Claude，API Key 通过环境变量注入，不写入配置文件。支持 macOS launchd 和 Linux crontab 定时自动运行。MIT 协议开源。</p>
+</section></article>
+</main>
+</body>
+</html>
+
+
