@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://ruswhy.top/logo.png">
+    <link rel="stylesheet" href="https://ruswhy.top/style.css">
+    <title>记录一次在远程服务器上配置 codex 的经历 - Russell&#39;s Digital Garden</title>
+</head>
+<body>
+<header>
+<nav class="main-nav">
+<a href="/">home</a><a href="/about">about</a><a href="/" class="logo"><img src="/logo.png" alt="logo"></a><a href="/blog">blog</a><a href="/contact">contact</a>
+<a href="https://ruswhy.top/atom.xml" class="rss-link" title="RSS Feed" aria-label="RSS Feed"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg></a>
+</nav>
+<nav class="sub-nav" aria-label="内容分类">
+<div class="sub-nav-groups">
+
+
+
+<a href="https://ruswhy.top/repo/book"><span aria-hidden="true">📖</span> book</a>
+
+
+<a href="https://ruswhy.top/repo/movie"><span aria-hidden="true">📽️</span> movie</a>
+
+
+<a href="https://ruswhy.top/repo/live"><span aria-hidden="true">🎟️</span> live</a>
+
+
+<a href="https://ruswhy.top/repo/sport"><span aria-hidden="true">👟</span> sport</a>
+
+
+<a href="https://ruswhy.top/repo/game"><span aria-hidden="true">🕹️</span> game</a>
+
+
+<a href="https://ruswhy.top/repo/project"><span aria-hidden="true">🛠️</span> project</a>
+
+
+
+<span class="nav-separator" aria-hidden="true">|</span>
+
+<a href="https://ruswhy.top/blog"><span aria-hidden="true">✍️</span> blog</a>
+
+
+
+<a href="https://ruswhy.top/tags/puzzles/" title="所有文章中最常用的标签"><span aria-hidden="true">#</span> puzzles</a>
+
+<a href="https://ruswhy.top/tags/reading/" title="最新五篇文章中的热门标签"><span aria-hidden="true">#</span> reading</a>
+
+
+
+
+<span class="nav-separator" aria-hidden="true">|</span>
+
+<a href="https://ruswhy.top/infra/bookmark"><span aria-hidden="true">🔖</span> bookmark</a>
+
+
+<a href="https://ruswhy.top/infra/timeline"><span aria-hidden="true">🕛</span> timeline</a>
+
+
+
+</div>
+</nav>
+</header>
+<main>
+<article><header><h1>记录一次在远程服务器上配置 codex 的经历</h1><div class="post-meta"><span class="cdm-item">2026-07-25</span><a class="cdm-item cdm-link-item" href="https://ruswhy.top/tags/codex/">#codex</a><a class="cdm-item cdm-link-item" href="https://ruswhy.top/tags/technology/">#technology</a></div></header>
+<nav class="toc"><h2>MENU</h2><ul><li><a href="https://ruswhy.top/blog/ji-lu-yi-ci-zai-yuan-cheng-fu-wu-qi-shang-pei-zhi-codex-de-jing-li/#fang-an-yi-zhi-jie-fu-zhi-mac-deng-lu-shang-de-auth-json">方案一：直接复制 Mac 登陆上的 auth.json</a></li><li><a href="https://ruswhy.top/blog/ji-lu-yi-ci-zai-yuan-cheng-fu-wu-qi-shang-pei-zhi-codex-de-jing-li/#fang-an-er-zai-fu-wu-qi-shang-an-zhuang-wang-luo-dai-li-ruan-jian">方案二：在服务器上安装网络代理软件</a></li><li><a href="https://ruswhy.top/blog/ji-lu-yi-ci-zai-yuan-cheng-fu-wu-qi-shang-pei-zhi-codex-de-jing-li/#fang-an-san-shi-yong-ben-di-wang-luo-dai-li">方案三：使用本地网络代理</a></li></ul></nav>
+<section class="post-content">
+    
+    
+    
+    <p>我在远程服务器上工作，希望配置 codex 环境。</p>
+<p>我的配置背景：之前使用中转站的 api-key，可以成功运行。现在订阅了 ChatGPT 的 plus plan，希望在远程登陆。服务器存在多个节点，登陆节点可以连接外网，计算节点则必须通过管理员指定的端口连接外网（这里的外网是相对于服务器环境内部局域网而言的，而非相对于中国大陆地区网络）。</p>
+<h1 id="fang-an-yi-zhi-jie-fu-zhi-mac-deng-lu-shang-de-auth-json">方案一：直接复制 Mac 登陆上的 auth.json</h1>
+<p>我在本地 mac 上有 clash 运行，可以成功验证登陆 codex，在将这一步得到的 auth.json 复制到服务器的 <code>～/.codex/</code> 下后，的确可以正常登陆。但是，在使用 codex CLI 进行工作时，api 交换需要成功连接到api.openai.com 的 IP (45.77.186.255) ，而这个 ip被 GFW 封锁，直连和学校代理都到不了。</p>
+<p>之前使用中转站，请求会先发送到中转站，绕过了这一步。</p>
+<p>到了这里，我发现必须在远程服务器上安装网络代理软件。此外，auth.json 是有时限的，其中的 access_token 每周更换一次，为避免麻烦，在服务器上彻底解决网络问题也是必然。</p>
+<h1 id="fang-an-er-zai-fu-wu-qi-shang-an-zhuang-wang-luo-dai-li-ruan-jian">方案二：在服务器上安装网络代理软件</h1>
+<p>安装成功，但是由于服务器管理员限制了开放端口，我订阅的机场又找不到 443 端口，该方法也不奏效。</p>
+<h1 id="fang-an-san-shi-yong-ben-di-wang-luo-dai-li">方案三：使用本地网络代理</h1>
+<p>在我的 <code>~/.ssh/config</code> 中添加了一行 <code>RemoteForward 1080 127.0.0.1:7890</code>，这是将本地端口在 <code>ssh</code> 连接时就将网络代理转发至本地。测试奏效了。</p>
+<p>为了确保多设备不会导致网络代理混乱，我只在某一台保持开机的电脑上配置了该文件，并启动了一个无头ssh连接</p>
+
+</section></article>
+</main>
+</body>
+</html>
+
+

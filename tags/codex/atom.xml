@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Russell&#39;s Digital Garden - codex</title>
+    <link rel="self" type="application/atom+xml" href="https://ruswhy.top/tags/codex/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ruswhy.top/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-07-25T00:00:00+00:00</updated>
+    <id>https://ruswhy.top/tags/codex/atom.xml</id>
+    <entry xml:lang="en">
+        <title>记录一次在远程服务器上配置 codex 的经历</title>
+        <published>2026-07-25T00:00:00+00:00</published>
+        <updated>2026-07-25T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ruswhy.top/blog/ji-lu-yi-ci-zai-yuan-cheng-fu-wu-qi-shang-pei-zhi-codex-de-jing-li/"/>
+        <id>https://ruswhy.top/blog/ji-lu-yi-ci-zai-yuan-cheng-fu-wu-qi-shang-pei-zhi-codex-de-jing-li/</id>
+        
+        <content type="html" xml:base="https://ruswhy.top/blog/ji-lu-yi-ci-zai-yuan-cheng-fu-wu-qi-shang-pei-zhi-codex-de-jing-li/">&lt;p&gt;我在远程服务器上工作，希望配置 codex 环境。&lt;/p&gt;
+&lt;p&gt;我的配置背景：之前使用中转站的 api-key，可以成功运行。现在订阅了 ChatGPT 的 plus plan，希望在远程登陆。服务器存在多个节点，登陆节点可以连接外网，计算节点则必须通过管理员指定的端口连接外网（这里的外网是相对于服务器环境内部局域网而言的，而非相对于中国大陆地区网络）。&lt;/p&gt;
+&lt;h1 id=&quot;fang-an-yi-zhi-jie-fu-zhi-mac-deng-lu-shang-de-auth-json&quot;&gt;方案一：直接复制 Mac 登陆上的 auth.json&lt;/h1&gt;
+&lt;p&gt;我在本地 mac 上有 clash 运行，可以成功验证登陆 codex，在将这一步得到的 auth.json 复制到服务器的 &lt;code&gt;～/.codex/&lt;/code&gt; 下后，的确可以正常登陆。但是，在使用 codex CLI 进行工作时，api 交换需要成功连接到api.openai.com 的 IP (45.77.186.255) ，而这个 ip被 GFW 封锁，直连和学校代理都到不了。&lt;/p&gt;
+&lt;p&gt;之前使用中转站，请求会先发送到中转站，绕过了这一步。&lt;/p&gt;
+&lt;p&gt;到了这里，我发现必须在远程服务器上安装网络代理软件。此外，auth.json 是有时限的，其中的 access_token 每周更换一次，为避免麻烦，在服务器上彻底解决网络问题也是必然。&lt;/p&gt;
+&lt;h1 id=&quot;fang-an-er-zai-fu-wu-qi-shang-an-zhuang-wang-luo-dai-li-ruan-jian&quot;&gt;方案二：在服务器上安装网络代理软件&lt;/h1&gt;
+&lt;p&gt;安装成功，但是由于服务器管理员限制了开放端口，我订阅的机场又找不到 443 端口，该方法也不奏效。&lt;/p&gt;
+&lt;h1 id=&quot;fang-an-san-shi-yong-ben-di-wang-luo-dai-li&quot;&gt;方案三：使用本地网络代理&lt;/h1&gt;
+&lt;p&gt;在我的 &lt;code&gt;~/.ssh/config&lt;/code&gt; 中添加了一行 &lt;code&gt;RemoteForward 1080 127.0.0.1:7890&lt;/code&gt;，这是将本地端口在 &lt;code&gt;ssh&lt;/code&gt; 连接时就将网络代理转发至本地。测试奏效了。&lt;/p&gt;
+&lt;p&gt;为了确保多设备不会导致网络代理混乱，我只在某一台保持开机的电脑上配置了该文件，并启动了一个无头ssh连接&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>
